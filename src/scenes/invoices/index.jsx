@@ -3,6 +3,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
 import { mockDataInvoices } from "../../data/mockData";
 import Header from "../../components/Header";
+import Sidebar from "../global/Sidebar";
 
 const Invoices = () => {
   const theme = useTheme();
@@ -43,38 +44,52 @@ const Invoices = () => {
   ];
 
   return (
-    <Box m="20px">
-      <Header title="INVOICES" subtitle="List of Invoice Balances" />
+    <Box display="flex" width="100vw" height="100vh" overflow="hidden">
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Main Content */}
       <Box
-        m="40px 0 0 0"
-        height="75vh"
-        sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
-            borderBottom: "none",
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
-        }}
+        flexGrow={1} // Ensures the main content takes up remaining space
+        m="20px"
+        display="flex"
+        flexDirection="column"
       >
-        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
+        {/* Header */}
+        <Header title="INVOICES" subtitle="List of Invoice Balances" />
+
+        {/* DataGrid Container */}
+        <Box
+          mt="20px"
+          height="calc(100% - 60px)" // Dynamically adjust height based on the header
+          sx={{
+            "& .MuiDataGrid-root": {
+              border: "none",
+            },
+            "& .MuiDataGrid-cell": {
+              borderBottom: "none",
+            },
+            "& .name-column--cell": {
+              color: colors.greenAccent[300],
+            },
+            "& .MuiDataGrid-columnHeaders": {
+              backgroundColor: colors.blueAccent[700],
+              borderBottom: "none",
+            },
+            "& .MuiDataGrid-virtualScroller": {
+              backgroundColor: colors.primary[400],
+            },
+            "& .MuiDataGrid-footerContainer": {
+              borderTop: "none",
+              backgroundColor: colors.blueAccent[700],
+            },
+            "& .MuiCheckbox-root": {
+              color: `${colors.greenAccent[200]} !important`,
+            },
+          }}
+        >
+          <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
+        </Box>
       </Box>
     </Box>
   );

@@ -5,6 +5,8 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
+import Sidebar from "../global/Sidebar";
+
 import {
   Box,
   List,
@@ -48,7 +50,9 @@ const Calendar = () => {
   };
 
   return (
-    <Box m="20px">
+    <Box display="flex" width="100vw" height="100vh" overflow="hidden">
+        <Sidebar />
+    <Box flexGrow={1} m="20px">
       <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">
@@ -125,6 +129,7 @@ const Calendar = () => {
           />
         </Box>
       </Box>
+    </Box>
     </Box>
   );
 };

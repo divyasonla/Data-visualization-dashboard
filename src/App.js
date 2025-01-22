@@ -1,7 +1,9 @@
+
+
 import React from "react";
 import { ColorModeContext, useMode } from "./theme";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import Topbar from "./scenes/global/Topbar";
+// import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Dashboard from "./scenes/dashboard";
@@ -16,7 +18,8 @@ import Pie from "./scenes/pie";
 import Line from "./scenes/line";
 import Geography from "./scenes/geography";
 import Login from "./components/Login";
-
+import Signup from "./components/Singup";
+// import Sidebar from "./scenes/global/Sidebar";
 function App() {
   const [theme, colorMode] = useMode();
 
@@ -27,12 +30,14 @@ function App() {
         <Router>
           <div className="app" style={{ display: "flex" }}>
             {/* Sidebar should be persistent */}
-            <Sidebar />
-            <div className="content" style={{ flex: 1 }}>
-              <Topbar />
+            {/* <Sidebar /> */}
+            <div className="content" style={{ flex: 1000 }}>
+              {/* <Topbar /> */}
               <Routes>
                 {/* <Route path="/" element={<Login />} /> */}
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/" element={<Login />} />
+                <Route path="/signup" element={<Signup />} />  
+                <Route path="/dash" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
@@ -43,6 +48,8 @@ function App() {
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/line" element={<Line />} />
                 <Route path="/geography" element={<Geography />} />
+                <Route path="/sidebar" element={<Sidebar />} />
+                {/* ReactDOM.render(<App />, document.getElementById("root")); */}
               </Routes>
             </div>
           </div>
@@ -55,18 +62,3 @@ function App() {
 export default App;
 
 
-
-// import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Login from "./components/Login";
-
-// function App() {
-//   return(
-//     <Router>
-//       <Routes>
-//         <Route path="/" element={<Login />} />
-//       </Routes>
-//     </Router>
-//   )
-// };
-// default export App;

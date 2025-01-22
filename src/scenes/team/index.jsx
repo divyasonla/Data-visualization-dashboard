@@ -6,6 +6,7 @@ import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettin
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
+import Sidebar from "../global/Sidebar";
 
 const Team = () => {
   const theme = useTheme();
@@ -69,7 +70,9 @@ const Team = () => {
   ];
 
   return (
-    <Box m="20px">
+    <Box display="flex" width="100vw" height="100vh" overflow="hidden">
+        <Sidebar />
+    <Box flexGrow={1} m="20px">
       <Header title="TEAM" subtitle="Managing the Team Members" />
       <Box
         m="40px 0 0 0"
@@ -102,6 +105,7 @@ const Team = () => {
       >
         <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
       </Box>
+    </Box>
     </Box>
   );
 };
