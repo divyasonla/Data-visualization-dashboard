@@ -75,6 +75,328 @@ export const mockDataTeam = [
   },
 ];
 
+export const mockDataInvoices =
+[
+  {
+    "id": 1,
+    "day": "4/10/2022",
+    "gender": "Female",
+    "a": 788,
+    "b": 502,
+    "c": 613,
+    "d": 726,
+    "e": 725,
+    "f": 628
+  },
+  {
+    "id": 2,
+    "day": "4/11/2022",
+    "gender": "Male",
+    "a": 900,
+    "b": 710,
+    "c": 820,
+    "d": 790,
+    "e": 850,
+    "f": 765
+  },
+  {
+    "id": 3,
+    "day": "4/12/2022",
+    "gender": "Female",
+    "a": 670,
+    "b": 590,
+    "c": 530,
+    "d": 700,
+    "e": 750,
+    "f": 820
+  },
+  {
+    "id": 4,
+    "day": "4/13/2022",
+    "gender": "Male",
+    "a": 850,
+    "b": 720,
+    "c": 630,
+    "d": 780,
+    "e": 890,
+    "f": 800
+  },
+  {
+    "id": 5,
+    "day": "4/14/2022",
+    "gender": "Female",
+    "a": 760,
+    "b": 680,
+    "c": 710,
+    "d": 740,
+    "e": 800,
+    "f": 650
+  },
+  {
+    "id": 6,
+    "day": "4/15/2022",
+    "gender": "Male",
+    "a": 850,
+    "b": 710,
+    "c": 780,
+    "d": 830,
+    "e": 900,
+    "f": 850
+  },
+  {
+    "id": 7,
+    "day": "4/16/2022",
+    "gender": "Female",
+    "a": 920,
+    "b": 630,
+    "c": 690,
+    "d": 760,
+    "e": 850,
+    "f": 900
+  },
+  {
+    "id": 8,
+    "day": "4/17/2022",
+    "gender": "Male",
+    "a": 780,
+    "b": 540,
+    "c": 670,
+    "d": 710,
+    "e": 830,
+    "f": 800
+  },
+  {
+    "id": 9,
+    "day": "5/10/2022",
+    "age_group": ">25",
+    "gender": "Female",
+    "a": 861,
+    "b": 78,
+    "c": 304,
+    "d": 367,
+    "e": 390,
+    "f": 190
+  },
+  {
+    "id": 10,
+    "day": "6/10/2022",
+    "age_group": "15-25",
+    "gender": "Male",
+    "a": 711,
+    "b": 792,
+    "c": 105,
+    "d": 898,
+    "e": 645,
+    "f": 980
+  },
+  {
+    "id": 11,
+    "day": "6/10/2022",
+    "age_group": ">25",
+    "gender": "Male",
+    "a": 894,
+    "b": 569,
+    "c": 236,
+    "d": 354,
+    "e": 192,
+    "f": 276
+  },
+  {
+    "id": 12,
+    "day": "6/10/2022",
+    "age_group": "15-25",
+    "gender": "Female",
+    "a": 365,
+    "b": 217,
+    "c": 314,
+    "d": 508,
+    "e": 787,
+    "f": 661
+  },
+  {
+    "id": 13,
+    "day": "6/10/2022",
+    "age_group": ">25",
+    "gender": "Female",
+    "a": 192,
+    "b": 63,
+    "c": 918,
+    "d": 825,
+    "e": 344,
+    "f": 723
+  },
+  {
+    "id": 14,
+    "day": "7/10/2022",
+    "age_group": "15-25",
+    "gender": "Male",
+    "a": 773,
+    "b": 886,
+    "c": 595,
+    "d": 81,
+    "e": 495,
+    "f": 686
+  },
+  {
+    "id": 15,
+    "day": "7/10/2022",
+    "age_group": ">25",
+    "gender": "Male",
+    "a": 101,
+    "b": 494,
+    "c": 896,
+    "d": 999,
+    "e": 500,
+    "f": 21
+  },
+  {
+    "id": 16,
+    "day": "7/10/2022",
+    "age_group": "15-25",
+    "gender": "Female",
+    "a": 792,
+    "b": 729,
+    "c": 782,
+    "d": 75,
+    "e": 550,
+    "f": 580
+  },
+  {
+    "id": 17,
+    "day": "7/10/2022",
+    "age_group": ">25",
+    "gender": "Female",
+    "a": 71,
+    "b": 222,
+    "c": 816,
+    "d": 597,
+    "e": 310,
+    "f": 607
+  },
+  {
+    "id": 18,
+    "day": "8/10/2022",
+    "age_group": "15-25",
+    "gender": "Male",
+    "a": 846,
+    "b": 375,
+    "c": 537,
+    "d": 260,
+    "e": 495,
+    "f": 497
+  },
+  {
+    "id": 19,
+    "day": "8/10/2022",
+    "age_group": ">25",
+    "gender": "Male",
+    "a": 618,
+    "b": 773,
+    "c": 992,
+    "d": 570,
+    "e": 809,
+    "f": 559
+  },
+  {
+    "id": 20,
+    "day": "8/10/2022",
+    "age_group": "15-25",
+    "gender": "Female",
+    "a": 252,
+    "b": 415,
+    "c": 604,
+    "d": 284,
+    "e": 210,
+    "f": 940
+  },
+  {
+    "id": 21,
+    "day": "8/10/2022",
+    "age_group": ">25",
+    "gender": "Female",
+    "a": 954,
+    "b": 742,
+    "c": 282,
+    "d": 214,
+    "e": 836,
+    "f": 392
+  },
+  {
+    "id": 22,
+    "day": "9/10/2022",
+    "age_group": "15-25",
+    "gender": "Male",
+    "a": 547,
+    "b": 198,
+    "c": 938,
+    "d": 786,
+    "e": 774,
+    "f": 582
+  },
+  {
+    "id": 23,
+    "day": "9/10/2022",
+    "age_group": ">25",
+    "gender": "Male",
+    "a": 474,
+    "b": 126,
+    "c": 547,
+    "d": 548,
+    "e": 104,
+    "f": 987
+  },
+  {
+    "id": 24,
+    "day": "9/10/2022",
+    "age_group": "15-25",
+    "gender": "Female",
+    "a": 420,
+    "b": 985,
+    "c": 744,
+    "d": 366,
+    "e": 331,
+    "f": 514
+  },
+  {
+    "id": 25,
+    "day": "9/10/2022",
+    "age_group": ">25",
+    "gender": "Female",
+    "a": 501,
+    "b": 638,
+    "c": 303,
+    "d": 48,
+    "e": 407,
+    "f": 43
+  },
+  {
+    "id": 26,
+    "day": "10/10/2022",
+    "age_group": "15-25",
+    "gender": "Male",
+    "a": 723,
+    "b": 783,
+    "c": 623,
+    "d": 483,
+    "e": 15,
+    "f": 99
+  },
+  {
+    "id": 27,
+    "day": "10/10/2022",
+    "age_group": ">25",
+    "gender": "Male",
+    "a": 647,
+    "b": 502,
+    "c": 54,
+    "d": 631,
+    "e": 348,
+    "f": 580
+  }
+
+]
+
+
 export const mockDataContacts = [
   {
     id: 1,
@@ -199,72 +521,6 @@ export const mockDataContacts = [
   },
 ];
 
-export const mockDataInvoices = [
-  {
-    id: 1,
-    name: "Jon Snow",
-    email: "jonsnow@gmail.com",
-    cost: "21.24",
-    phone: "(665)121-5454",
-    date: "03/12/2022",
-  },
-  {
-    id: 2,
-    name: "Cersei Lannister",
-    email: "cerseilannister@gmail.com",
-    cost: "1.24",
-    phone: "(421)314-2288",
-    date: "06/15/2021",
-  },
-  {
-    id: 3,
-    name: "Jaime Lannister",
-    email: "jaimelannister@gmail.com",
-    cost: "11.24",
-    phone: "(422)982-6739",
-    date: "05/02/2022",
-  },
-  {
-    id: 4,
-    name: "Anya Stark",
-    email: "anyastark@gmail.com",
-    cost: "80.55",
-    phone: "(921)425-6742",
-    date: "03/21/2022",
-  },
-  {
-    id: 5,
-    name: "Daenerys Targaryen",
-    email: "daenerystargaryen@gmail.com",
-    cost: "1.24",
-    phone: "(421)445-1189",
-    date: "01/12/2021",
-  },
-  {
-    id: 6,
-    name: "Ever Melisandre",
-    email: "evermelisandre@gmail.com",
-    cost: "63.12",
-    phone: "(232)545-6483",
-    date: "11/02/2022",
-  },
-  {
-    id: 7,
-    name: "Ferrara Clifford",
-    email: "ferraraclifford@gmail.com",
-    cost: "52.42",
-    phone: "(543)124-0123",
-    date: "02/11/2022",
-  },
-  {
-    id: 8,
-    name: "Rossini Frances",
-    email: "rossinifrances@gmail.com",
-    cost: "21.24",
-    phone: "(222)444-5555",
-    date: "05/02/2021",
-  },
-];
 
 export const mockTransactions = [
   {

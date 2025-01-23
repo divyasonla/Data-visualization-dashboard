@@ -6,6 +6,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { tokens } from "../../theme";
 import Sidebar from "../global/Sidebar";
+import Topbar from "../global/Topbar";
 const FAQ = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode)
@@ -14,6 +15,8 @@ const FAQ = () => {
         <Box display="flex" width="100vw" height="100vh" overflow="hidden">
         <Sidebar />
         <Box flexGrow={1} m="20px">
+        <Topbar />
+
             <Header title="FAQ" subtitle="Frequently Asked Question Page" />
             <Accordion defaultExpanded>
                 <AccordionSummary expandIcon={<ExpandMoreIcon />}>

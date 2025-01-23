@@ -29,8 +29,7 @@ function App() {
         <CssBaseline />
         <Router>
           <div className="app" style={{ display: "flex" }}>
-            {/* Sidebar should be persistent */}
-            {/* <Sidebar /> */}
+
             <div className="content" style={{ flex: 1000 }}>
               {/* <Topbar /> */}
               <Routes>
@@ -49,7 +48,6 @@ function App() {
                 <Route path="/line" element={<Line />} />
                 <Route path="/geography" element={<Geography />} />
                 <Route path="/sidebar" element={<Sidebar />} />
-                {/* ReactDOM.render(<App />, document.getElementById("root")); */}
               </Routes>
             </div>
           </div>

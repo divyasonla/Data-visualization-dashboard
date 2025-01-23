@@ -6,6 +6,7 @@ import { mockDataContacts } from "../../data/mockData";
 import Header from "../../components/Header";
 import { useTheme } from "@mui/material";
 import Sidebar from "../global/Sidebar";
+import Topbar from "../global/Topbar";
 
 const Contacts = () => {
   const theme = useTheme();
@@ -58,6 +59,8 @@ const Contacts = () => {
     <Box display="flex" width="100vw" height="100vh" overflow="hidden">
         <Sidebar />
     <Box flexGrow={1} m="20px">
+    <Topbar />
+
       <Header
         title="CONTACTS"
         subtitle="List of Contacts for Future Reference"

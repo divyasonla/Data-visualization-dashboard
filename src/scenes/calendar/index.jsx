@@ -6,6 +6,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import listPlugin from "@fullcalendar/list";
 import Sidebar from "../global/Sidebar";
+import Topbar from "../global/Topbar";
 
 import {
   Box,
@@ -53,6 +54,8 @@ const Calendar = () => {
     <Box display="flex" width="100vw" height="100vh" overflow="hidden">
         <Sidebar />
     <Box flexGrow={1} m="20px">
+    <Topbar />
+
       <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">

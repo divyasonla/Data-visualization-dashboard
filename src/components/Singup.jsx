@@ -5,13 +5,10 @@ import Cookies from "js-cookie";
 
 function Signup() {
   const [formData, setFormData] = useState({
-    username: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
   const [error, setError] = useState("");
-
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -25,20 +22,25 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
-      setError("Passwords do not match.");
+    // Get the existing users from the cookies
+    let existingUsers = Cookies.get("users");
+    existingUsers = existingUsers ? JSON.parse(existingUsers) : [];
+
+    // Check if the email already exists
+    if (existingUsers.some(user => user.email === formData.email)) {
+      setError("This email is already registered!");
       return;
     }
 
-    if (formData.username && formData.email && formData.password) {
-      console.log("Signup Successful!", formData);
-      Cookies.set("email", formData.email, { expires: 7 });
-      Cookies.set("password", formData.password, { expires: 7 });
+    // Add new user to the list of users
+    const newUser = { email: formData.email, password: formData.password };
+    existingUsers.push(newUser);
 
-      navigate("/dash"); 
-    } else {
-      setError("Please fill all fields.");
-    }
+    // Store the updated list of users in cookies (7-day expiry)
+    Cookies.set("users", JSON.stringify(existingUsers), { expires: 7 });
+
+    console.log("Signup Successful!");
+    navigate("/"); // Redirect to login page
   };
 
   return (
@@ -56,15 +58,6 @@ function Signup() {
         <TextField
           fullWidth
           variant="filled"
-          label="Username"
-          name="username"
-          value={formData.username}
-          onChange={handleChange}
-          sx={{ marginBottom: "20px" }}
-        />
-        <TextField
-          fullWidth
-          variant="filled"
           label="Email"
           name="email"
           value={formData.email}
@@ -74,20 +67,10 @@ function Signup() {
         <TextField
           fullWidth
           variant="filled"
-          type="password"
           label="Password"
+          type="password"
           name="password"
           value={formData.password}
-          onChange={handleChange}
-          sx={{ marginBottom: "20px" }}
-        />
-        <TextField
-          fullWidth
-          variant="filled"
-          type="password"
-          label="Confirm Password"
-          name="confirmPassword"
-          value={formData.confirmPassword}
           onChange={handleChange}
           sx={{ marginBottom: "20px" }}
         />
@@ -96,15 +79,6 @@ function Signup() {
           Signup
         </Button>
       </form>
-      <Box mt={2}>
-        <Button
-          color="primary[400]"
-          onClick={() => navigate("/login")}
-          variant="text"
-        >
-          Already have an account? Login
-        </Button>
-      </Box>
     </Box>
   );
 }

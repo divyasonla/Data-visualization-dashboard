@@ -111,7 +111,7 @@ const Sidebar = () => {
                   Divya Sonla
                 </Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]}>
-                  Web Developer
+                  VP Admin
                 </Typography>
               </Box>
             </Box>

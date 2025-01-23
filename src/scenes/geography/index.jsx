@@ -3,6 +3,7 @@ import GeographyChart from "../../components/GeographyChart";
 import Header from "../../components/Header";
 import { tokens } from "../../theme";
 import Sidebar from "../global/Sidebar";
+import Topbar from "../global/Topbar";
 
 const Geography = () => {
   const theme = useTheme();
@@ -11,6 +12,8 @@ const Geography = () => {
     <Box display="flex" width="100vw" height="100vh" overflow="hidden">
         <Sidebar />
     <Box flexGrow={1} m="20px">
+    <Topbar />
+
       <Header title="Geography" subtitle="Simple Geography Chart" />
 
       <Box
