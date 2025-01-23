@@ -1,4 +1,4 @@
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton, useTheme, Button } from "@mui/material";
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import InputBase from "@mui/material/InputBase";
@@ -8,11 +8,20 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Topbar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    Cookies.remove("userToken"); 
+    Cookies.remove("userSession"); 
+    navigate("/"); 
+  };
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -28,8 +37,8 @@ const Topbar = () => {
         </IconButton>
       </Box>
 
-      {/* ICONS */}
-      <Box display="flex">
+      {/* ICONS AND LOGOUT BUTTON */}
+      <Box display="flex" alignItems="center">
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <DarkModeOutlinedIcon />
@@ -46,6 +55,15 @@ const Topbar = () => {
         <IconButton>
           <PersonOutlinedIcon />
         </IconButton>
+        {/* Logout Button */}
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={handleLogout}
+          sx={{ ml: 2 }}
+        >
+          Logout
+        </Button>
       </Box>
     </Box>
   );

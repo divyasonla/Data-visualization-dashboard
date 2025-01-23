@@ -3,34 +3,32 @@ import { tokens } from "../../theme";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-import Header from "../../components/Header"; // Ensure this path is correct
-import Sidebar from "../global/Sidebar"; // Ensure this path is correct
+import Header from "../../components/Header"; 
+import Sidebar from "../global/Sidebar"; 
 import Topbar from "../global/Topbar";
 
 const Invoice = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
-  const [data, setData] = useState([]); // State to store fetched data
-  const [filteredData, setFilteredData] = useState([]); // State to store filtered data
+  const [data, setData] = useState([]); 
+  const [filteredData, setFilteredData] = useState([]); 
   const [genderFilter, setGenderFilter] = useState("");
   const [ageFilter, setAgeFilter] = useState("");
 
-  // Fetch data automatically when the component mounts
   useEffect(() => {
     axios
       .get("https://api.sheetbest.com/sheets/a53759cb-7c12-40a2-a169-a3a799ee036c")
       .then((response) => {
         console.log(response.data);
-        setData(response.data); // Save fetched data to state
-        setFilteredData(response.data); // Initialize filtered data with full data
+        setData(response.data); 
+        setFilteredData(response.data); 
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
-  }, []); // Empty dependency array ensures this runs only once
+  }, []); 
 
-  // Filter function
   const handleFilter = () => {
     let filtered = data;
 
@@ -42,7 +40,7 @@ const Invoice = () => {
       filtered = filtered.filter((item) => item.Age === ageFilter);
     }
 
-    setFilteredData(filtered); // Update filtered data state
+    setFilteredData(filtered);
   };
 
   return (

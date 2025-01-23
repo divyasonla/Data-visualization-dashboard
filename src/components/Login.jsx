@@ -23,19 +23,17 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Get the list of users from the cookies
     const storedUsers = Cookies.get("users");
     if (storedUsers) {
       const users = JSON.parse(storedUsers);
 
-      // Check if the entered email and password match any stored user
       const user = users.find(
         (user) => user.email === formData.email && user.password === formData.password
       );
 
       if (user) {
         console.log("Login Successful!");
-        navigate("/dash"); // Navigate to dashboard
+        navigate("/dash"); 
       } else {
         setError("Invalid email or password. Please try again.");
       }
